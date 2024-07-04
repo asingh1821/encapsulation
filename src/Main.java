@@ -1,49 +1,42 @@
-class Student {
-    private String name;
-    private int age;
-    private long phoneNumber;
-
-    public String getName() {
+class Employee {
+    private long accountNo;
+    private String name,email;
+    private float balance;
+    public long getAccountNo(){
+        return accountNo;
+    }
+    public void setAccountNo(long accountNo){
+        this.accountNo = accountNo;
+    }
+    public String getName(){
         return name;
     }
-
-    public void setName(String name) {
+    public void setName(String name){
         this.name = name;
     }
-
-    public int getAge() {
-        return age;
+    public String getEmail(){
+        return email;
     }
-
-    public void setAge(int age){
-        this.age = age;
+    public void setEmail(String email){
+        this.email = email;
     }
-    public long getPhoneNumber() {
-        return phoneNumber;
+    public float getBalance(){
+        return balance;
     }
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setBalance(float balance){
+        this.balance = balance;
     }
-
 }
- public class Main {
-     public static void main(String[] args) {
-         Student s1 = new Student();
-         Student s2 = new Student();
-         s1.setName("Amit");
-         s1.setAge(25);
-         s1.setPhoneNumber(3248978);
-         System.out.println("Name- " + s1.getName());
-         System.out.println("Age- " + s1.getAge());
-         System.out.println("PhoneNumber- " + s1.getPhoneNumber());
-
-         s2.setName("Ankit ");
-         s2.setAge(26);
-         s2.setPhoneNumber(8489282);
-         System.out.println("Name- " + s2.getName());
-         System.out.println("Age- " + s2.getAge());
-         System.out.println("PhoneNumber- " + s2.getPhoneNumber());
-
-     }
- }
+public class Main{
+    public static void main(String[] args){
+        Employee Ram = new Employee();
+        Ram.setAccountNo(987563);
+        Ram.setName("Ramcharan");
+        Ram.setEmail("ramcharan@gmail.com");
+        Ram.setBalance(1000);
+        System.out.println("Emp Account no. - "+ Ram.getAccountNo());
+        System.out.println("Emp Name - "+ Ram.getName());
+        System.out.println("Emp Email  - "+ Ram.getEmail());
+        System.out.println("Emp balance. - "+ Ram.getBalance());
+    }
+}
